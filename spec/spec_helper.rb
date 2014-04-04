@@ -39,4 +39,5 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+  config.include Capybara::DSL # required so that spec/requests/static_pages_spec.rb will run properly
 end
