@@ -4,6 +4,14 @@ This is the sample application for
 the [*Ruby on Rails Tutorial*](http://railstutorial.org/)
 by [Michael Hartl](http://michaelhartl.com/).
 
+Process to add pages
+  1.) add relevant tests to spec/requests/static_pages_spec.rb
+  2.) add route to config/routes.rb
+  3.) add the relevant action to the controller
+
+
+WGG -- test static pages with $ bundle exec rspec spec/requests/static_pages_spec.rb
+
 WGG 4/4/2014 05:27 PM -- completed up to section "3.3.4 Eliminating duplication with layouts"
 WGG 4/3/2014 10:38 PM -- completed up to "3.3 Slightly dynamic pages"
 
