@@ -4,6 +4,7 @@ This is the sample application for
 the [*Ruby on Rails Tutorial*](http://railstutorial.org/)
 by [Michael Hartl](http://michaelhartl.com/).
 
+WGG 4/4/2014 05:27 PM -- completed up to section "3.3.4 Eliminating duplication with layouts"
 WGG 4/3/2014 10:38 PM -- completed up to "3.3 Slightly dynamic pages"
 
 WGG 4/3/2014 09:00 PM -- working on postgres and localhost:3000/static_pages/home
