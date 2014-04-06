@@ -31,6 +31,14 @@ Generating a user model
   1.) $ rails generate model User name:string email:string
     (Note that, in contrast to the plural convention for controller names, 
     model names are singular: a Users controller, but a User model.)
+  2.) Now rake the migration
+    $ bundle exec rake db:migrate
+    # undo with the below if necessary:
+    $ bundle exec rake db:rollback
+  3.) $ rails c --sandox # launches rails console sandbox version
+    > User.new # creates a new user
+  4.) When testing, need to migrate the dev database to test
+    $ bundle exec rake test:prepare
 
 WGG 04/06/2014 12:43 PM -- In Rails, the default data structure for a data
  model is called, naturally enough, a model (the M in MVC). The default Rails
