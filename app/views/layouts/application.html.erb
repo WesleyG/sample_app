@@ -6,30 +6,14 @@
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <%= render 'layouts/shim' %>
+    <!-- WGG 04/05/2014 The effect of this line is to look for a file called app/views/layouts/_shim.html.erb, evaluate its contents, and insert the results into the view -->
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-    <!-- WGG 04/05/2014 navbar-fixed-top fixes nav bar to top of page
-    navbar-inverse makes the bar dark instead of light -->
-      <div class="navbar-inner">
-        <div class="container">
-          <%= link_to "sample app", '#', id: "logo" %>
-          <!-- WGG 04/05/2014 id: logo points to #logo in custom.css.scss -->
-          <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "Home",    '#' %></li>
-              <li><%= link_to "Help",    '#' %></li>
-              <li><%= link_to "Sign in", '#' %></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
