@@ -3,6 +3,8 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.4'
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets', '2.11.0' # WGG 4/5/2014 -- 2.12 caused bootstrap errors
 gem 'pg', '0.17.1'
 
 group :development, :test do
