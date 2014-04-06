@@ -1,4 +1,5 @@
 SampleApp::Application.routes.draw do
+  get "users/new"
   root  'static_pages#home'
   # root gives the url helpers:
   #   root_path -> '/'

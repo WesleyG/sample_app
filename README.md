@@ -10,6 +10,14 @@ Process to add pages
   3.) add the relevant action to the controller
   4.) test with bundle exec rspec spec/requests/static_pages_spec.rb
 
+Making a route for the sign up page from rails tutorial sect 5.4
+  1.) Generate users controller
+     $ rails generate controller Users new --no-test-framework
+  2.) Generate integration tests
+     $ rails generate integration_test user_pages
+
+WGG 04/06/2014 11:11 AM -- adding notes on making a route for sign up page
+
 WGG 04/05/2014 04:27 PM -- completed chapter 3 without the complex testing section
 
 WGG 04/04/2014 05:27 PM -- completed up to section "3.3.4 Eliminating duplication with layouts"
