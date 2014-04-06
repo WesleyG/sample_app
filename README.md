@@ -15,6 +15,11 @@ Making a route for the sign up page from rails tutorial sect 5.4
      $ rails generate controller Users new --no-test-framework
   2.) Generate integration tests
      $ rails generate integration_test user_pages
+  3.) Run tests (1 failure)
+     $ bundle exec rspec spec/requests/user_pages_spec.rb
+     # or run all tests with
+     $ bundle exec rspec spec/requests/
+  4.) 
 
 WGG 04/06/2014 11:11 AM -- adding notes on making a route for sign up page
 
