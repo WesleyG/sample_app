@@ -1,4 +1,4 @@
-module ApplicationHelper
+module ApplicationHelper # allows the methods below, such as full_title to be available in all views
 
   # Returns the full title on a per-page basis.
   def full_title(page_title)
