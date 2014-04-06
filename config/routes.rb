@@ -1,11 +1,21 @@
 SampleApp::Application.routes.draw do
   root  'static_pages#home'
+  # root gives the url helpers:
+  #   root_path -> '/'
+  #   root_url  -> 'http://localhost:3000/'
   match '/help',    to: 'static_pages#help',    via: 'get'
-  match '/about',   to: 'static_pages#about',   via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
   # WGG 04/05/2014 -- This arranges both for a valid page at /help 
   # (responding to GET requests) and a named route called help_path 
   # that returns the path to that page.
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  # WGG 04/06/2014 --matches a GET request for ’/about’ 
+  # and routes it to the about action in the StaticPages controller
+  # as with above, creates a named route called about_path
+  # The above also creates the two named routes below:
+  #   about_path -> '/about'
+  #   about_url  -> 'http://localhost:3000/about'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
