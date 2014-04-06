@@ -19,7 +19,8 @@ textarea {
   resize: vertical;
 }
 
-/* WGG 04/05/2014 -- associates the center class with text-align setting 
+/* WGG 04/05/2014 -- the . indicates that the rule styles a class
+  and associates the center class with text-align setting 
   center as seen in home.html.erb */
 .center {
   text-align: center;
@@ -54,4 +55,26 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+/* header */
+
+/* WGG 04/05/2014 -- the # indicates that the rule styles an id
+  rather than a class as the . indicates. In this case this points
+  to the logo class in */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
 }
