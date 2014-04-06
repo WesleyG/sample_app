@@ -17,9 +17,16 @@ Making a route for the sign up page from rails tutorial sect 5.4
      $ rails generate integration_test user_pages
   3.) Run tests (1 failure)
      $ bundle exec rspec spec/requests/user_pages_spec.rb
-     # or run all tests with
+     # or run all request tests with
      $ bundle exec rspec spec/requests/
-  4.) 
+     # or all tests with
+     $ bundle exec rspec spec/
+  4.) Add the signup route
+     match '/signup',  to: 'users#new',            via: 'get'
+  5.) Add title to the signup page
+     <% provide(:title, 'Sign up') %>
+     <h1>Sign up</h1>
+  6.) 
 
 WGG 04/06/2014 11:11 AM -- adding notes on making a route for sign up page
 

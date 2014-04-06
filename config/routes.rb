@@ -16,6 +16,7 @@ SampleApp::Application.routes.draw do
   #   about_path -> '/about'
   #   about_url  -> 'http://localhost:3000/about'
   match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/signup',  to: 'users#new',            via: 'get'
 
 
 
