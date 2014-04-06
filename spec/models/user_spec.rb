@@ -49,4 +49,17 @@ describe User do
     end
   end
 
+  describe "when email address is already taken" do
+    before do
+      user_with_same_email = @user.dup
+      # user.dup creates a duplicate user with the same attributes
+      user_with_same_email.email = @user.email.upcase
+      # emails are typically processed as case insensitive, this tests
+      # for differences in case
+      user_with_same_email.save
+    end
+
+    it { should_not be_valid }
+  end
+
 end
