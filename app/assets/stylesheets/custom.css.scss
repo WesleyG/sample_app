@@ -24,10 +24,9 @@ textarea {
   center as seen in home.html.erb */
 .center {
   text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
+  h1 {
+    margin-bottom: 10px;
+  }
 }
 
 /* typography */
@@ -72,40 +71,36 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
-}
-
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
+  &:hover {
+	color: #fff;
+	text-decoration: none;
+  }
 }
 
 /* footer */
 
+/* WGG 04/05/2014 -- SCSS allows for the nesting seen here for a,
+  small and ul */
 footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #999;
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 10px;
+  a {
+	  color: #555;
+	  &:hover {
+	  	color: #222;
+	  }
+	}
+  small {
+    float: left;
+  }
+  ul {
+	float: right;
+	list-style: none;
+	li {
+		float: left;
+		margin-left: 10px;   	
+    }
+  }
 }

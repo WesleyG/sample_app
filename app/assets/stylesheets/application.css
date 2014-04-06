@@ -11,3 +11,15 @@
  *= require_self
  *= require_tree .
  */
+
+/* WGG 04/05/2014 -- the last two rows of the above comments with
+  start equals are used by sprockets to include the required files 
+  
+  tree ensures that all CSS files in the app/assets/stylesheets directory 
+    (including the tree subdirectories) are included into the application
+
+  self specifies where in the loading sequence the CSS in application.css 
+    itself gets included
+
+
+*/
