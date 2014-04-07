@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
-  get "users/new"
+  resources :users
+  # WGG 04/07/2014 endows our sample application with all the 
+  # actions needed for a RESTful Users resource
   root  'static_pages#home'
   # root gives the url helpers:
   #   root_path -> '/'
