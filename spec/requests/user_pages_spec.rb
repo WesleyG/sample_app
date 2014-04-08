@@ -1,18 +1,21 @@
 require 'spec_helper'
 
-describe ApplicationHelper do
+describe "User pages" do
 
-  describe "full_title" do
-    it "should include the page title" do
-      expect(full_title("foo")).to match(/foo/)
-    end
+  subject { page }
 
-    it "should include the base title" do
-      expect(full_title("foo")).to match(/^Ruby on Rails Tutorial Sample App/)
-    end
+  describe "profile page" do
+    let(:user) { FactoryGirl.create(:user) }
+    before { visit user_path(user) }
 
-    it "should not include a bar for the home page" do
-      expect(full_title("")).not_to match(/\|/)
-    end
+    it { should have_content(user.name) }
+    it { should have_title(user.name) }
+  end
+
+  describe "signup page" do
+    before { visit signup_path }
+
+    it { should have_content('Sign up') }
+    it { should have_title(full_title('Sign up')) }
   end
 end
