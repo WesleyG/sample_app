@@ -6,6 +6,8 @@ SampleApp::Application.routes.draw do
   # root gives the url helpers:
   #   root_path -> '/'
   #   root_url  -> 'http://localhost:3000/'
+  resources :sessions, only: [:new, :create, :destroy]
+  # Adding a resource to get the standard RESTful actions for sessions. 
   match '/help',    to: 'static_pages#help',    via: 'get'
   # WGG 04/05/2014 -- This arranges both for a valid page at /help 
   # (responding to GET requests) and a named route called help_path 
@@ -19,6 +21,8 @@ SampleApp::Application.routes.draw do
   #   about_url  -> 'http://localhost:3000/about'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
 
 
 
