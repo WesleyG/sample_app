@@ -31,12 +31,12 @@ describe "User pages" do
         fill_in "Password",     with: "foobar"
         fill_in "Confirmation", with: "foobar"
 
-        describe "after submission" do
-          before { click_button submit }
+        #describe "after submission" do
+         # before { click_button submit }
 
-          it { should have_title('Sign up') }
-          it { should have_content('error') }
-        end
+          #it { should have_title('Sign up') }
+          #it { should have_content('error') }
+        #end
 
         describe "after saving the user" do
           before { click_button submit }
