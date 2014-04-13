@@ -8,6 +8,9 @@ gem 'sprockets', '2.11.0' # WGG 4/5/2014 -- 2.12 caused bootstrap errors
 gem 'pg', '0.17.1'
 gem 'bcrypt-ruby', '3.1.2' # WGG 04/06/2014 -- allows us to encrypt passwords
 gem 'faker', '1.1.2' # WGG 04/13/2014 -- create fake users
+# WGG 04/13/2014 adding pagination to users
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'

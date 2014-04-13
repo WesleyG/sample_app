@@ -45,7 +45,8 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users =  User.all
+    # WG 04/13/2014 -- using paginate rather than all
+    @users = User.paginate(page: params[:page])
   end
 
   private
