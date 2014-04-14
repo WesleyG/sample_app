@@ -51,10 +51,13 @@ class UsersController < ApplicationController
 
   private
 
+    # note that admin is not an option to prevent users
+    # without permission from editing admin status
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
     end
+
     # Before filters
 
     def signed_in_user
