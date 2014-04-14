@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
 
   # require signed in user for index, edit and update actions
-  before_action :signed_in_user, only: [:index, :edit, :update]
+  # WGG 4/13/2014 -- add destroy action
+  before_action :signed_in_user, only: [:index, :edit, :update, :destroy]
 
   # require correct user for edit and update action
   before_action :correct_user,   only: [:edit, :update] 
+
+  # only admins can destroy
+  before_action :admin_user,     only: :destroy
   
   def show
   	# retrieve user from database
@@ -45,9 +49,16 @@ class UsersController < ApplicationController
   end
 
   def index
-    # WG 04/13/2014 -- using paginate rather than all
+    # WGG 04/13/2014 -- using paginate rather than all
     @users = User.paginate(page: params[:page])
   end
+
+  # WGG 04/13/2014 -- add destroy
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted."
+    redirect_to users_url
+  end    
 
   private
 
@@ -70,5 +81,9 @@ class UsersController < ApplicationController
     def correct_user
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
+    end
+
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
     end
 end
